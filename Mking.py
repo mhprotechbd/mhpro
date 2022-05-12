@@ -116,33 +116,7 @@ tgl = '%s %s %s' % (ha, op, ta)
 bulan_ttl = {'01': 'January', '02': 'February', '03': 'March', '04': 'April', '05': 'May', '06': 'June', '07': 'July', '08': 'August', '09': 'September', '10': 'October', '11': 'November', '12': 'December'}
 logo = '\n\x1b[1;91m             ##     ##    ##    ## #### ##    ##  ######\x1b[1;0m\n\x1b[1;91m            ###   ###    ##   ##   ##  ###   ## ##    ##\x1b[1;0m\n\x1b[1;97m           #### ####    ##  ##    ##  ####  ## ##\x1b[1;0m\n\x1b[1;97m          ## ### ##    #####     ##  ## ## ## ##   ####\x1b[1;0m\n\x1b[1;91m         ##     ##    ##  ##    ##  ##  #### ##    ## \x1b[1;0m\n\x1b[1;91m        ##     ##    ##   ##   ##  ##   ### ##    ##\x1b[1;0m\n\x1b[1;97m       ##     ##    ##    ## #### ##    ##  ######\x1b[1;0m\n\x1b[1;97m--------------------------------------------------\n\x1b[1;91m Author      : Mohammad Sultani \n\x1b[1;91m GitHub      : https://github.com/Mohammadjan1122\n\x1b[1;91m YouTube     : Termux Master\n\x1b[1;91m Telegram    : https://t.me/sultani1122\n\x1b[1;91m Blogspot    : https://mohammadsultani.blogspot.com\n\x1b[1;97m--------------------------------------------------\n'
 
-def mohammad():
-    uuid = str(os.geteuid()) + str(os.getlogin())
-    id = ('-').join(uuid)
-    print logo
-    print '\x1b[37;1mYour ID : ' + id
-    try:
-        httpCaht = requests.get('https://raw.githubusercontent.com/Mohammadjan1122/Mking/main/Id.txt').text
-        if id in httpCaht:
-            print '\x1b[37;1mYOUR ID IS ACTIVE.........'
-            msg = str(os.geteuid())
-            time.sleep(1)
-        else:
-            print '\x1b[37;1mYOUR ID IS NOT ACTIVE.........'
-            print '\x1b[37;1msend id to Telegram group (@mking_script )...'
-            os.system('xdg-open https://t.me/mking_script')
-            time.sleep(1)
-            sys.exit()
-        try:
-            open('login.txt', 'r')
-            menu()
-        except IOError:
-            login()
 
-    except:
-        sys.exit()
-        if name == '__main__':
-            mohammad()
 
 
 def clear():
